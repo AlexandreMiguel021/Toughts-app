@@ -1,0 +1,23 @@
+.footer {
+  height: 170px;
+  background-color: var(--blue);
+  background-image: url('https://d35aaqx5ub95lt.cloudfront.net/images/star-pattern.svg');
+}
+
+.footer .container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__copy {
+  font-size: 19px;
+  color: white;
+  text-shadow: 1px 1px 2px #0000008e;
+}
+
+.footer span {
+  color: #ffd061;
+}

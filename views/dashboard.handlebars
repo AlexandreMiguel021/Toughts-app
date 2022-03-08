@@ -1,0 +1,29 @@
+<div class="dashboard">
+  <div class='btn-create'>
+    <i class="bi bi-lightbulb-fill"></i>
+    <a href="/add">Criar pesamento</a>
+  </div>
+  <h2 class='title'>Dashboard</h2>
+  <div class='toughts-container'>
+    {{#if toughts}}
+    <h3>Seus pensamentos</h3>
+    <ul class='toughts__list'>
+      {{#each toughts}}
+      <li class='toughts__items'>
+        <span class='toughts__title'>{{this.title}}</span>
+        <div class='toughts__actions'>
+          <a class='toughts__btn edit' href="/edit/{{this.id}}">Editar</a>
+          <form action="/remove" method='post'>
+            <input type="hidden" name='id' value='{{this.id}}'>
+            <button class='toughts__btn delete' type='submit'>Excluir</button>
+          </form>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+    {{else}}
+    <h2 class='empty-thoughts-message'>Não há nenhum pensamento seu, comece a criar por <a href="/add">aqui!💡</a>
+    </h2>
+    {{/if}}
+  </div>
+</div>

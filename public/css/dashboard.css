@@ -1,0 +1,94 @@
+.toughts-container h3 {
+  color: var(--blue);
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.btn-create {
+  margin-top: 0.5rem;
+  width: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 0.5rem;
+  background-color: var(--green);
+  color: white;
+  border-radius: 10px;
+}
+
+.btn-create a {
+  color: white;
+}
+
+.toughts__btn {
+  padding: 0.3rem 0.4rem;
+  border: 1px solid white;
+  width: 80px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 0.2rem;
+}
+
+.edit {
+  background-color: #ef8930;
+  color: white;
+  height: 36.5px;
+}
+
+.delete {
+  background-color: #df0303ce;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.toughts__btn:hover {
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+
+.create {
+  background-color: var(--green);
+  color: white;
+  border-radius: 10px;
+}
+
+.toughts__items {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--blue);
+}
+
+.toughts__title {
+  font-size: 20px;
+  margin-right: 0.5rem;
+  color: var(--dark-gray);
+}
+
+.toughts__actions {
+  display: flex;
+}
+
+.empty-thoughts-message {
+  color: var(--green);
+  text-align: center;
+}
+
+.empty-thoughts-message a {
+  color: var(--dark-blue);
+  opacity: 0.9;
+}
+
+.response-search-message {
+  margin: 1rem 0;
+  text-align: center;
+  color: var(--blue);
+}
+
+.response-search-message span {
+  color: #ef8930;
+}

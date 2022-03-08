@@ -1,0 +1,51 @@
+<!-- response search messages -->
+
+{{#if search}}
+<h1 class='title'>Você está buscando por: <span>{{search}}</span></h1>
+{{#if toughtsLength}}
+<p class='response-search-message'>Foram encontrados <span>{{toughtsLength}}</span> pensamentos</p>
+{{else}}
+<p class='response-search-message'>Nenhum pensamento foi encontrado para o termo <span>{{search}}</span></p>
+{{/if}}
+{{else}}
+<h1 class='title'>Veja os pensamentos da galera</h1>
+{{/if}}
+
+<!-- container to search terms  -->
+
+<div class="toughts__container">
+  <form action="/" method='get'>
+    <div class="input-container search-container">
+      <input class='form__input search-input' type="text" name='search' placeholder='Buscando por algo?'>
+      <button class='form__button search-btn' type='submit'><i class="bi bi-search"></i> Buscar</button>
+    </div>
+  </form>
+
+  <div class="sort-container">
+    <span>Ordenar por:</span>
+    <!-- Sort uptodown button -->
+    <form class='sort-form' action="/" method='get'>
+      <input type="hidden" name='search' value='{{this.search}}'>
+      <input type="hidden" name='sort' value='new'>
+      <button class='sort-btn' type='submit'><i class="bi bi-sort-up"></i></button>
+    </form>
+    <!-- Sort downtoup button -->
+    <form class='sort-form' action="/" method='get'>
+      <input type="hidden" name='search' value='{{this.search}}'>
+      <input type="hidden" name='sort' value='old'>
+      <button class='sort-btn' type='submit'><i class="bi bi-sort-down"></i></button>
+    </form>
+    <a class='sort-btn' href="/">Limpar</a>
+  </div>
+
+  <!-- toughts results -->
+
+  {{#each toughts}}
+  <figure class='all-toughts'>
+    <blockquote class='all-toughts__title'><span class='quotes'>"</span>{{this.title}}<span class='quotes'>"</span>
+    </blockquote>
+    <figcaption>por <span class='toughts__author'>{{this.User.name}}</span></figcaption>
+  </figure>
+  {{/each}}
+
+</div>

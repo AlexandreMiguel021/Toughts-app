@@ -1,0 +1,26 @@
+<div class="tought-form-container">
+  <div class='btn-return'>
+    <i class="bi bi-arrow-return-left"></i>
+    <a href="/dashboard">Voltar</a>
+  </div>
+
+  <h1 class='title'>Editando pensamento</h1>
+
+  <form class='form' action="edit" method='post'>
+    <input type="hidden" name='id' value='{{tought.id}}'>
+
+    <div class="input-container">
+      <label class='form__label' for="title">pensamento:</label>
+      <input class='form__input' type="text" name='title' placeholder='Digite o seu pensamento'
+        value="{{tought.title}}">
+    </div>
+
+    <div class=" input-container">
+      <button class='form__button'>Editar Pensamento</button>
+    </div>
+  </form>
+
+  <div class='illustration-container'>
+    <img class='tought-illustration' src="/img/toughts.svg" alt="">
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.illustration-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tought-illustration {
+  height: 350px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/createTought.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <title>Toughts</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <a class="logo" href="/">
+        <img class="logo__img" src="/img/idea.svg" alt="Toughts logo">
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__items"><a class="nav__links" href="/">Pensamentos</a></li>
+          {{#if session.userid}}
+          <li class="nav__items"><a class="nav__links" href="/dashboard">Dashboard</a></li>
+          <li class="nav__items"><a class="nav__links" href="/logout">Sair</a></li>
+          {{else}}
+          <li class="nav__items"><a class="nav__links" href="/login">Entrar</a></li>
+          <li class="nav__items"><a class="nav__links register" href="/register">Registrar</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- flash messages -->
+    <div class="container">
+      {{#if messages.error}}
+      <div class="message error">
+        {{messages.error}}
+      </div>
+      {{/if}}
+
+      {{#if messages.success}}
+      <div class="message success">
+        {{messages.success}}
+      </div>
+      {{/if}}
+
+      {{{body}}}
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__copy"><span>Toughts</span> &copy; 2022</p>
+    </div>
+  </footer>
+</body>
+
+</html>
